@@ -1,0 +1,30 @@
+{
+  "name": "codecafe-page",
+  "version": "0.0.1",
+  "author": "codecafe.tv",
+  "contributors": [
+    {
+      "name": "Giovanny Beltran",
+      "email": "gio@codetag.me"
+    },
+    {
+      "name": "Julian Vargs",
+      "email": "j@codetag.me"
+    }
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codecafetv/webpage.git"
+  },
+  "dependencies": {
+    "express": "~3.4.7",
+    "jade": "~1.1.0"
+  },
+  "devDependencies": {
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
