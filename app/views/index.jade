@@ -9,13 +9,12 @@ block content
           div#banner.box
             div
               div.row
-                div.6u
-                  img(src='http://placehold.it/480x320' alt='')
-                div.6u
-                  h2 titulo de video 0
-                  p descripción de video 0
-                  br
-                  a.button.big.fa.fa-arrow-circle-right(href='/video') Ver vídeo
+                div.7u
+                  iframe(width="560" height="315" src="#{first.youtube_url}" frameborder="0" allowfullscreen)
+                div.5u
+                  h2
+                    a(href='/video/#{first.slug}')= first.title
+                  p= first.description
 
   div#features-wrapper
     div.container

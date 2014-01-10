@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  div.container
+    form(method='POST')
+      label(for='title') Titulo: 
+      input#title(name='title' type='text')
+      br
+      label(for='description') Descripci&oacute;n:
+      input#description(name='description' type='text')
+      br
+      label(for='url') URL youtube
+      input#url(name='url' type='url')
+      br
+      input(type='submit')
