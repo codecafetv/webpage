@@ -10,7 +10,7 @@ block content
             div
               div.row
                 div.7u
-                  iframe(width="560" height="315" src="#{first.youtube_url}" frameborder="0" allowfullscreen)
+                  iframe(width="560" height="315" src="//www.youtube.com/embed/#{first.youtube_id}" frameborder="0" allowfullscreen)
                 div.5u
                   h2
                     a(href='/video/#{first.slug}')= first.title
@@ -20,42 +20,16 @@ block content
     div.container
       div.row
         ul.8u.skel-cell-important.row
+          for video in videos
+            li
+              section.preview
+                a.image.image-left(href='/video/#{video.slug}')
+                  img(src='//img.youtube.com/vi/#{video.youtube_id}/sddefault.jpg' alt='')
+                div.pull-right
+                  header
+                    h3= video.title
+                    span.byline= video.description
 
-          li
-            section.preview
-              a.image.image-left(href='#')
-                img(src='http://placehold.it/480x270' alt='')
-              div.pull-right
-                header
-                  h3 titulo de video -1
-                  p descripción del video -1
-                
-          li
-            section.preview
-              a.image.image-left(href='#')
-                img(src='http://placehold.it/480x270' alt='')
-              div.pull-right
-                header
-                  h3 titulo de video -2
-                  span.byline descripción del video -2
-          li
-            section.preview
-              a.image.image-left(href='#')
-                img(src='http://placehold.it/480x270' alt='')
-              div.pull-right
-                header
-                  h3 titulo de video -3
-                  span.byline descripción del video -3
-                
-
-          li
-            section.preview
-              a.image.image-left(href='#')
-                img(src='http://placehold.it/480x270' alt='')
-              div.pull-right
-                header
-                  h3 titulo de video -4
-                  span.byline descripción del video -4
 
         div.4u
           div#sidebar

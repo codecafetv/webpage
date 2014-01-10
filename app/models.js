@@ -10,7 +10,7 @@ var connection = mongoose.connect(mongoUri);
 var VideoSchema = new Schema({
   title: {type: String},
   slug: {type: String},
-  youtube_url: {type: String},
+  youtube_id: {type: String},
   description: {type: String},
   date: {type: Date, default: Date.now}
 });

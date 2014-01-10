@@ -29,7 +29,7 @@ app.post('/video/upload', function(req, res){
   new models.VideoModel({
     title: req.body.title,
     slug: slug(req.body.title),
-    youtube_url: req.body.url,
+    youtube_id: req.body.youtube_id,
     description: req.body.description
   }).save(function(err, video){
     if(err) return;
