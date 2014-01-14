@@ -14,8 +14,8 @@ app.get('/', function(req, res){
   .exec(function(err, videos){
     res.render('index', {
       title: 'Explicando código - CodeCafe.tv',
-      videos: videos,
-      first: videos[0]
+      first: videos.shift(),
+      videos: videos
     });
   });
 });
