@@ -28,7 +28,7 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/video/upload', function(req, res){
+app.get('/video/upload', csrf, function(req, res){
   res.render('video-upload', {title: 'Subir video - CodeCafe.tv'});
 });
 

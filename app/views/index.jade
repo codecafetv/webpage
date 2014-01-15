@@ -18,13 +18,14 @@ block content
   div#features-wrapper
     div.container
       div.row
-        ul.8u.skel-cell-important.row
+        ul.8u.skel-cell-important
           for video in videos
             li
-              section.preview
-                a.image.image-left(href='/video/#{video.slug}')
-                  img(src='//img.youtube.com/vi/#{video.youtube_id}/sddefault.jpg' alt='')
-                div.pull-right
+              section.preview.row
+                a.pull-left.4u(href='/video/#{video.slug}' style='margin-right:0')
+                  img(src='//img.youtube.com/vi/#{video.youtube_id}/sddefault.jpg' alt='imagen de #{video.title}')
+                
+                div.pull-right.8u.last
                   header
                     h3= video.title
                     span.byline= video.description
