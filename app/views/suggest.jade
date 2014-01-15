@@ -7,4 +7,17 @@ block content
       div.row
         div.12u.skel-cell-important
           div#content
-            p formulario pendiente para solicitar codecafes
+            p Envía el siguiente formulario si tienes alguna sugerencia para un
+              | codecafe o te gustaría presentar uno. 
+
+            form(method='POST')
+              input(type='hidden', name='_csrf', value=token)
+              label(for='suggestion') Sugerencia:
+              br
+              textarea#suggestion.4u(name='suggestion' rows=5 required)
+              br
+              label(for='author') twitter:
+              br
+              input#author.4u(name='author' type='text' required)
+              br
+              input(type='submit')

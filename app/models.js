@@ -15,4 +15,10 @@ var VideoSchema = new Schema({
   date: {type: Date, default: Date.now}
 });
 
+var SuggestionSchema = new Schema({
+  author: String,
+  suggestion: String
+});
+
 exports.VideoModel = mongoose.model('Video', VideoSchema);
+exports.SuggestionModel = mongoose.model('Suggestion', SuggestionSchema);
