@@ -1,4 +1,6 @@
 extends layout
+block meta
+  meta(property='og:image' content='https://pbs.twimg.com/profile_images/422795217817722880/HuV9-swM.jpeg')
 
 block content
 
@@ -10,7 +12,7 @@ block content
             div
               div.row
                 div.7u
-                  iframe(width="560" height="315" src="//www.youtube.com/embed/#{first.youtube_id}" frameborder="0" allowfullscreen)
+                  iframe(width='560' height='315' src='//www.youtube.com/embed/#{first.youtube_id}' frameborder='0' allowfullscreen)
                 div.5u
                   h2
                     a(href='/video/#{first.slug}')= first.title
@@ -27,15 +29,16 @@ block content
                 
                 div.pull-right.8u.last
                   header
-                    h3= video.title
+                    h3
+                      a(href='/video/#{video.slug}')= video.title
                     span.byline= video.description
 
 
         div.4u
           div#sidebar
             section
-              a.twitter-timeline(href="https://twitter.com/search?q=codecafetv" data-widget-id="423235209438306304") Tweets about "codecafetv"
+              a.twitter-timeline(href='https://twitter.com/search?q=codecafetv' data-widget-id='423235209438306304') Tweets about 'codecafetv'
               script
-                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');
 
 
