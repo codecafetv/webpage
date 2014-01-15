@@ -48,6 +48,10 @@ app.post('/video/upload', function(req, res){
 app.get('/video/:slug', function(req, res){
   console.log(req.params.slug);
   models.VideoModel.findOne({slug: req.params.slug}, function(err, video){
+    if(!video){
+      res.render(404, '404');
+      return;
+    }
     res.render('video', {
       title: video.title + ' - CodeCafe.tv',
       video: video
